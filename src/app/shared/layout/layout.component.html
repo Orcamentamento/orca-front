@@ -1,0 +1,9 @@
+<app-header></app-header>
+<app-menu-lateral></app-menu-lateral>
+<div *ngIf="!isProduction" style="background-color: red; padding: 10px; color: white; margin-left: 50px;">Ambiente de desenvolvimento</div>
+<div class="ng-content" [ngClass]="{'aw-hidden-menu-content': !isMenuVisible}">
+  <div class="ng-content-inner">
+    <router-outlet></router-outlet>
+  </div>
+  <!-- <app-footer style="margin-top: auto;"></app-footer> -->
+</div>
